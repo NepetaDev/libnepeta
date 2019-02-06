@@ -44,3 +44,25 @@ struct NEPPalette {
     UIColor *detail;
 };
 ```
+
+## Using it in your own projects
+
+Install libnepeta from my repo ([https://repo.nepeta.me/](https://repo.nepeta.me/)) on your device and copy the following directories/files to your computer.
+
+/usr/include/Nepeta -> $THEOS/include/Nepeta
+
+/usr/lib/libnepeta.dylib -> $THEOS/lib/libnepeta.dylib
+
+Then add libnepeta to your project:
+
+Makefile: 
+
+```
+[PROJECT_NAME]_LIBRARIES += [your other libraries] nepeta
+```
+
+control file:
+
+```
+Depends: [other dependencies] me.nepeta.libnepeta
+```
