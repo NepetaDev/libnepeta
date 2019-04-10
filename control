@@ -1,6 +1,6 @@
 Package: me.nepeta.libnepeta
 Name: libnepeta
-Version: 0.1.0
+Version: 0.1.1
 Architecture: iphoneos-arm
 Description: Nepeta's color utils
 Maintainer: Nepeta
