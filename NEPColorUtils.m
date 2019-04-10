@@ -26,7 +26,7 @@ MIT Licensed, original author: @jathu
     return YES;
 }
 
-+(struct NEPPalette)averageColors:(UIImage *)img withAlpha:(double)alpha {
++(NEPPalette *)averageColors:(UIImage *)img withAlpha:(double)alpha {
     CGSize newSize = img.size;
     double resizeTo = 25;
     double ratio = img.size.height/img.size.width;
@@ -57,10 +57,10 @@ MIT Licensed, original author: @jathu
 
     NSCountedSet *colors = [[NSCountedSet alloc] initWithCapacity:width*height];
     for (unsigned long i = 0; i < length; i+=4) {
-        if (data[i+3] >= 127) {
+        //if (data[i+3] >= 127) {
             unsigned long rgba = data[i] + (data[i+1] << 8) + (data[i+2] << 16) + (data[i+3] << 24);
             [colors addObject:@(rgba)];
-        }
+        //}
     }
 
     free(data);
@@ -152,7 +152,7 @@ MIT Licensed, original author: @jathu
         }
     }
 
-    struct NEPPalette palette;
+    NEPPalette *palette = [NEPPalette alloc];
 
     palette.background = [proposed[0] uicolorWithAlpha:alpha];
     palette.primary = [proposed[1] uicolorWithAlpha:alpha];

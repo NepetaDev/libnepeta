@@ -4,7 +4,7 @@
 @interface NEPColorUtils : NSObject
 
 +(BOOL)isDark:(UIColor *)color;
-+(struct NEPPalette)averageColors:(UIImage *)img withAlpha:(double)alpha;
++(NEPPalette *)averageColors:(UIImage *)img withAlpha:(double)alpha;
 +(UIColor *)averageColor:(UIImage *)image withAlpha:(double)alpha;
 +(UIColor *)averageColorNew:(UIImage *)img withAlpha:(double)alpha;
 +(UIColor *)colorWithMinimumSaturation:(UIColor *)img withSaturation:(double)saturation;

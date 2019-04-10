@@ -3,7 +3,7 @@ ARCHS = armv7 arm64 arm64e
 include $(THEOS)/makefiles/common.mk
 
 LIBRARY_NAME = libnepeta
-$(LIBRARY_NAME)_OBJC_FILES = NEPColor.m NEPColorUtils.m
+$(LIBRARY_NAME)_OBJC_FILES = NEPColor.m NEPColorUtils.m NEPPalette.m
 $(LIBRARY_NAME)_CFLAGS = -I./
 $(LIBRARY_NAME)_FRAMEWORKS += QuartzCore
 $(LIBRARY_NAME)_USE_MODULES = 0
